@@ -1,4 +1,4 @@
-# Dialect 🗣️
+# Dialect 🌐
 
 > **One line:** A dialect is a named group of MLIR operations, types and
 > attributes, for example `arith`, `scf`, `linalg` or `llvm`. A program can

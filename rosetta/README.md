@@ -1,9 +1,9 @@
 # Rosetta 🪨
 
-The same program written in every tool, compared side by side.
+The same program in every tool, compared side by side, with real output and measurements.
 
-| Page                                          | Status |
-| --------------------------------------------- | ------ |
-| [Vector add in 5 IRs](vector-add-in-5-irs.md) | ✅     |
-| Reduction (sum) in 5 IRs                      | ⏳     |
-| Matmul: naive, tiled, then fused              | ⏳     |
+| Page                                                          | In one line                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Vector Add in 5 IRs 🪨](vector-add-in-5-irs.md)              | One program, `c[i] = a[i] + b[i]`, shown at each level of the stack.                                                                                                                                                                                                                                                |
+| [Reduction (Sum) in 5 IRs ➕](reduction-in-5-irs.md)          | One program, `s = x[0] + x[1] + ... + x[n-1]`, shown at each level.                                                                                                                                                                                                                                                 |
+| [Matmul: Naive, Tiled, Fused 🧮](matmul-naive-tiled-fused.md) | One benchmark, many optimizations, real numbers. [samples/matmul_cpu.mojo](../samples/matmul_cpu.mojo) computes `C = A × B` for float32 matrices on this Apple M2, from a textbook triple loop to a register-blocked SIMD kernel, and checks every version against the reference (`diff: 0.0` means bit-identical). |

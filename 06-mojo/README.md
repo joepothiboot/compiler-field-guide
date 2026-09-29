@@ -1,15 +1,15 @@
 # Mojo 🔥
 
-Mojo language terms that matter for writing libraries.
+Mojo 1.1 language and library features that matter for writing fast, generic libraries.
 
-| Page                                                            | Status |
-| --------------------------------------------------------------- | ------ |
-| `def`, `struct`, and argument conventions (`mut`, `out`, `var`) | ⏳     |
-| Ownership and the transfer operator `^`                         | ⏳     |
-| Traits (`Copyable`, `Movable`)                                  | ⏳     |
-| Parameters `[...]` vs arguments `(...)`                         | ⏳     |
-| `comptime`                                                      | ⏳     |
-| `SIMD[dtype, width]` and `DType`                                | ⏳     |
-| MAX and Mojo kernels                                            | ⏳     |
+| Page                                                                              | In one line                                                                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [def, struct and Argument Conventions 🔥](def-struct-and-argument-conventions.md) | Mojo functions are declared with `def`, data types with `struct`, and every argument has a convention that says whether the function borrows it (`read`, the default), mutates the caller's value (`mut`), owns its own value (`var`) or initializes the caller's result (`out`). |
+| [Ownership and Transfer `^` 📦➡️](ownership-and-transfer.md)                      | Every Mojo value has exactly one owner.                                                                                                                                                                                                                                           |
+| [Traits 🧬](traits.md)                                                            | A trait is a named set of methods a type promises to have, like an interface.                                                                                                                                                                                                     |
+| [Parameters vs Arguments 🎚️](parameters-vs-arguments.md)                          | In Mojo, parameters go in square brackets `[...]` and are known at compile time.                                                                                                                                                                                                  |
+| [comptime ⏱️](comptime.md)                                                        | `comptime` asks the compiler to evaluate something while compiling: a constant (`comptime X = ...`), a branch (`comptime if`) or an unrolled loop (`comptime for`).                                                                                                               |
+| [SIMD and DType 🧮](simd-and-dtype.md)                                            | `SIMD[dtype, width]` is Mojo's core numeric type: a fixed-size vector of `width` elements of type `dtype`, mapped directly onto hardware SIMD registers.                                                                                                                          |
+| [MAX and Mojo Kernels 🏎️](max-and-mojo-kernels.md)                                | MAX is Modular's inference platform: a graph compiler and runtime whose kernels are written in Mojo.                                                                                                                                                                              |
 
-✅ written · ⏳ planned. New pages start from [../_templates/term.md](../_templates/term.md).
+New pages start from [../_templates/term.md](../_templates/term.md).

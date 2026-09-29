@@ -2,14 +2,14 @@
 
 What is specific to compiling ML workloads.
 
-| Page                                                 | Status |
-| ---------------------------------------------------- | ------ |
-| Tensor and shape (static vs dynamic)                 | ⏳     |
-| Layout and strides                                   | ⏳     |
-| Kernel                                               | ⏳     |
-| Graph compiler vs kernel compiler                    | ⏳     |
-| Triton's programming model (programs, blocks, masks) | ⏳     |
-| Autotuning                                           | ⏳     |
-| torch.compile: Dynamo and Inductor                   | ⏳     |
+| Page                                                                | In one line                                                                                                                                                                                                                                                 |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Tensor and Shape 📦](tensor-and-shape.md)                          | A tensor is an n-dimensional array of one element type.                                                                                                                                                                                                     |
+| [Layout and Strides 📐](layout-and-strides.md)                      | Memory is one long line, so a multi-dimensional tensor must be flattened.                                                                                                                                                                                   |
+| [Kernel 🌰](kernel.md)                                              | A kernel is one compiled function that performs one tensor operation (or a fused group of them) on an accelerator or a CPU.                                                                                                                                 |
+| [Graph Compiler vs Kernel Compiler 🗺️](graph-vs-kernel-compiler.md) | A graph compiler optimizes the whole model: which ops to fuse, which layouts to use, when to allocate memory.                                                                                                                                               |
+| [Triton Programming Model 🔱](triton-programming-model.md)          | In Triton you write a kernel for one program, which handles one block (tile) of data using whole-block operations (`tl.load`, `+`, `tl.dot`, `tl.sum`).                                                                                                     |
+| [Autotuning 🎛️](autotuning.md)                                      | Autotuning means compiling several versions of a kernel with different settings (tile sizes, warps, stages), timing each one on the real hardware and input shapes, and keeping the fastest.                                                                |
+| [torch.compile: Dynamo and Inductor 🔥](torch-compile.md)           | `torch.compile(fn)` captures the PyTorch operations your Python code performs into a graph (TorchDynamo), then hands that graph to a compiler backend (Inductor by default), which fuses operations and generates new kernels: Triton on GPUs, C++ on CPUs. |
 
-✅ written · ⏳ planned. New pages start from [../_templates/term.md](../_templates/term.md).
+New pages start from [../_templates/term.md](../_templates/term.md).
