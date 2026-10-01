@@ -31,16 +31,16 @@ SIMD kernel library with a C++ reference oracle is done, tested against the
 same golden values. The benchmark sweep that validates the tile-size model
 (Stage 5) and the DSL front end are not done.
 
-| Concept                                 | In nano-dsp-mlir                                           | Guide page                                                                            |
-| --------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| Custom dialect in ODS                   | `include/nanodsp/Dialect/DSP/IR/DSPOps.td`                 | [ODS and TableGen](../02-ir-design/ods-and-tablegen.md)                               |
-| Canonicalization pattern                | `ReluOp::canonicalize` in `lib/Dialect/DSP/IR/DSPOps.cpp`  | [Pattern rewrite](../03-transformations/pattern-rewrite.md)                           |
-| Full conversion, ConversionTarget       | `lib/Conversion/DSPToLinalg/DSPToLinalg.cpp`               | [Legalization](../02-ir-design/legalization.md)                                       |
-| `linalg.generic` (fusion-ready)         | output of `--convert-dsp-to-linalg`                        | [Fusion](../03-transformations/fusion.md)                                             |
-| End-to-end lowering to LLVM             | `test/Integration/end-to-end.mlir`                         | [Dialect](../02-ir-design/dialect.md)                                                 |
-| Tiling + vectorization as data          | `lib/Schedule/`, `-nanodsp-optimize`, `test/Schedule/`     | [Tiling](../03-transformations/tiling.md)                                             |
-| SIMD kernels in Mojo                    | `mojo/nanodsp/kernels.mojo`                                | [SIMD and DType](../06-mojo/simd-and-dtype.md)                                        |
-| NaN semantics (`maximumf` vs `maxnumf`) | `dsp.relu` description in `DSPOps.td`                      | [Canonicalization and folding](../03-transformations/canonicalization-and-folding.md) |
+| Concept                                 | In nano-dsp-mlir                                          | Guide page                                                                            |
+| --------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Custom dialect in ODS                   | `include/nanodsp/Dialect/DSP/IR/DSPOps.td`                | [ODS and TableGen](../02-ir-design/ods-and-tablegen.md)                               |
+| Canonicalization pattern                | `ReluOp::canonicalize` in `lib/Dialect/DSP/IR/DSPOps.cpp` | [Pattern rewrite](../03-transformations/pattern-rewrite.md)                           |
+| Full conversion, ConversionTarget       | `lib/Conversion/DSPToLinalg/DSPToLinalg.cpp`              | [Legalization](../02-ir-design/legalization.md)                                       |
+| `linalg.generic` (fusion-ready)         | output of `--convert-dsp-to-linalg`                       | [Fusion](../03-transformations/fusion.md)                                             |
+| End-to-end lowering to LLVM             | `test/Integration/end-to-end.mlir`                        | [Dialect](../02-ir-design/dialect.md)                                                 |
+| Tiling + vectorization as data          | `lib/Schedule/`, `-nanodsp-optimize`, `test/Schedule/`    | [Tiling](../03-transformations/tiling.md)                                             |
+| SIMD kernels in Mojo                    | `mojo/nanodsp/kernels.mojo`                               | [SIMD and DType](../06-mojo/simd-and-dtype.md)                                        |
+| NaN semantics (`maximumf` vs `maxnumf`) | `dsp.relu` description in `DSPOps.td`                     | [Canonicalization and folding](../03-transformations/canonicalization-and-folding.md) |
 
 ## 📐 json-schema-mlir (`a558730`)
 
