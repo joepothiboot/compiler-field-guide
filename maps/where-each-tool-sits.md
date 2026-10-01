@@ -100,8 +100,8 @@
 ```
  json-schema-mlir   JSON Schema ─► schema dialect ─► arith/scf/math ─► LLVM IR ─► native validator
  nano-dsp-mlir      dsp dialect ─► linalg.generic ─► loops ─► LLVM IR     (+ Mojo SIMD kernels, same golden tests;
-                                                                        tiling stage planned)
- vizmlir            reads --mlir-print-ir-after-all output, diffs the IR between passes (Rust → WASM parser)
+                                                                        tiled + vectorized by a Transform schedule)
+ vizmlir            reads --mlir-print-ir-after-all output: GPU view with proven memory verdicts, pass diffs (Rust → WASM parser)
  llvm-idioms-workbench   C++ AST, LLVM-style RTTI, pass manager   (codebases/)
  compiler-mechanics-cpp  SSA, dataflow, regalloc by hand           (codebases/)
 ```

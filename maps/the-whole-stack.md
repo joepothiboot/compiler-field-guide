@@ -70,7 +70,7 @@ json-schema-mlir :  JSON schema ──► custom dialect ──► upstream MLIR
 nano-dsp-mlir    :  dsp dialect ──► linalg ──► loops ──► LLVM IR    (+ Mojo kernels
                                                                      as a second
                                                                      implementation)
-vizmlir          :  reads the .mlir text at each step and shows the differences
+vizmlir          :  reads the .mlir text at each step, draws the GPU work, shows the differences
 ```
 
 ## 🔗 Related
