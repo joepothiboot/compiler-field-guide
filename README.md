@@ -22,7 +22,8 @@ say so when something could not be run here (Triton, SASS, the Mac GPU).
 3. **[01-foundations/](01-foundations/)**: basic blocks, SSA, dominance, loops.
 4. **[rosetta/vector-add-in-5-irs.md](rosetta/vector-add-in-5-irs.md)**: one
    program in five IRs, to connect the vocabulary.
-5. Then any chapter. **[GLOSSARY.md](GLOSSARY.md)** is the A–Z index, and
+5. **[vocab/](vocab/)**: the lookup table for `%arg0`, `vector.transfer_read`, `pid`, `offs`.
+6. Then any chapter. **[GLOSSARY.md](GLOSSARY.md)** is the A–Z index, and
    **[interview/](interview/)** has a week-by-week plan.
 
 ## 📚 Contents
@@ -39,6 +40,7 @@ say so when something could not be run here (Triton, SASS, the Mac GPU).
 | [07-codegen-runtime](07-codegen-runtime/)     | Instruction selection, register allocation, JIT/AOT, ABI, linking, PTX/SASS                                               | 6     |
 | [08-cpp-for-compilers](08-cpp-for-compilers/) | Ownership and arenas, SmallVector, CRTP, `isa`/`dyn_cast`, intrusive lists, variant ASTs, safe rewrites, LLVM conventions | 8     |
 | [09-algorithms](09-algorithms/)               | Dominators, SSA construction, dataflow, graph-coloring register allocation, by hand                                       | 4     |
+| [vocab](vocab/)                               | The shared names: value names, opcodes, kernel parameter names, and which tool uses which                                 | 4     |
 | [maps](maps/)                                 | The whole stack; each tool's pipeline; a matmul's journey to PTX                                                          | 3     |
 | [rosetta](rosetta/)                           | Vector add, reduction and matmul across tools, with measurements                                                          | 3     |
 | [real-world](real-world/)                     | Codebase tours: LLVM/MLIR, Triton, PyTorch Inductor, Mojo/MAX, my projects                                                | 5     |
