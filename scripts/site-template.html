@@ -31,7 +31,7 @@ section[hidden] { display: none; }
 <div id="bar"><div id="bar-inner">
   <input id="q" type="search" placeholder="Filter pages..." autocomplete="off">
   <div id="chips"></div>
-  <div id="count"></div> <button id="copyall" class="copy">Copy shown pages</button>
+  <div id="count"></div> <button id="copyall" class="copy">Copy shown pages</button> <button id="dlall" class="copy">Download shown (.md)</button>
 </div></div>
 <main id="pages" class="markdown-body-wrap"></main>
 __PAGES__
@@ -118,7 +118,13 @@ const raw = id => '# ' + id + '.md\n\n' + sources.find(s => s.id === id).textCon
 document.addEventListener('click', e => {
   const b = e.target.closest('.copy');
   if (!b) return;
-  if (b.id === 'copyall') copy(b, [...pages.children].filter(s => !s.hidden).map(s => raw(s.id)).join('\n\n---\n\n'));
+  const shown = () => [...pages.children].filter(s => !s.hidden).map(s => raw(s.id)).join('\n\n---\n\n');
+  if (b.id === 'dlall') {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([shown()], {type: 'text/markdown'}));
+    a.download = 'compiler-field-guide-' + chapter + '.md';
+    a.click();
+  } else if (b.id === 'copyall') copy(b, shown());
   else copy(b, raw(b.dataset.id));
 });
 
