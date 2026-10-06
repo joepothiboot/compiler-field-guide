@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compiler-field-guide</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css">
+<style>
+:root { --bg: #fff; --fg: #1f2328; --border: #d1d9e0; --chip: #f6f8fa; --accent: #0969da; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0d1117; --fg: #f0f6fc; --border: #3d444d; --chip: #151b23; --accent: #4493f8; }
+}
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+#bar { position: sticky; top: 0; z-index: 1; background: var(--bg); border-bottom: 1px solid var(--border); padding: 8px 16px; }
+#bar-inner { max-width: 980px; margin: 0 auto; }
+#q { width: 100%; box-sizing: border-box; padding: 8px 12px; font-size: 16px; color: var(--fg); background: var(--chip); border: 1px solid var(--border); border-radius: 6px; }
+#chips { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0 2px; }
+#chips button { flex: none; padding: 4px 10px; font-size: 13px; color: var(--fg); background: var(--chip); border: 1px solid var(--border); border-radius: 2em; cursor: pointer; }
+#chips button.on { color: #fff; background: var(--accent); border-color: var(--accent); }
+#count { font-size: 12px; opacity: .7; padding-top: 4px; }
+main { max-width: 980px; margin: 0 auto; padding: 16px; }
+section { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+section[hidden] { display: none; }
+.path { font-size: 12px; opacity: .7; margin-bottom: 8px; }
+.path a { color: inherit; }
+.markdown-body { background: transparent; }
+</style>
+</head>
+<body>
+<div id="bar"><div id="bar-inner">
+  <input id="q" type="search" placeholder="Filter pages..." autocomplete="off">
+  <div id="chips"></div>
+  <div id="count"></div>
+</div></div>
+<main id="pages" class="markdown-body-wrap"></main>
+__PAGES__
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.12/marked.min.js"></script>
+<script>
+const REPO = "__REPO__";
+const sources = [...document.querySelectorAll('script[type="text/markdown"]')];
+const ids = new Set(sources.map(s => s.id));
+const pages = document.getElementById('pages');
+const q = document.getElementById('q');
+const chips = document.getElementById('chips');
+const count = document.getElementById('count');
+let chapter = 'all';
+
+function resolve(dir, href) {
+  const path = new URL(href, 'http://x/' + dir + '/').pathname.slice(1);
+  return decodeURIComponent(path);
+}
+
+function target(dir, href) {
+  const path = resolve(dir, href.split('#')[0]);
+  const asPage = path.replace(/\.md$/, '');
+  if (path.endsWith('.md') && ids.has(asPage)) return '#' + asPage;
+  const readme = (path.replace(/\/$/, '') + '/README').replace(/^\//, '');
+  if (path.endsWith('/') && ids.has(readme)) return '#' + readme;
+  const kind = path.endsWith('/') ? 'tree' : 'blob';
+  return REPO + '/' + kind + '/main/' + path;
+}
+
+function fixLinks(el, dir) {
+  for (const a of el.querySelectorAll('a[href]')) {
+    const href = a.getAttribute('href');
+    if (/^([a-z]+:|#|\/\/)/i.test(href) || !href) continue;
+    a.setAttribute('href', target(dir, href));
+  }
+}
+
+for (const s of sources) {
+  const dir = s.id.split('/').slice(0, -1).join('/');
+  const sec = document.createElement('section');
+  sec.id = s.id;
+  sec.dataset.chapter = s.dataset.chapter;
+  sec.innerHTML = '<div class="path"><a href="' + REPO + '/blob/main/' + s.id + '.md">' + s.id + '.md</a></div><article class="markdown-body">' + marked.parse(s.textContent) + '</article>';
+  fixLinks(sec, dir);
+  sec.dataset.text = sec.textContent.toLowerCase();
+  pages.appendChild(sec);
+}
+
+const chapters = ['all', ...new Set(sources.map(s => s.dataset.chapter))];
+for (const c of chapters) {
+  const b = document.createElement('button');
+  b.textContent = c;
+  b.onclick = () => { chapter = c; apply(); };
+  chips.appendChild(b);
+}
+
+function apply() {
+  const words = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+  let shown = 0;
+  for (const sec of pages.children) {
+    const inChapter = chapter === 'all' || sec.dataset.chapter === chapter;
+    const matches = words.every(w => sec.dataset.text.includes(w));
+    sec.hidden = !(inChapter && matches);
+    if (!sec.hidden) shown++;
+  }
+  for (const b of chips.children) b.classList.toggle('on', b.textContent === chapter);
+  count.textContent = shown + ' of ' + sources.length + ' pages';
+}
+
+function jump() {
+  const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!el) return;
+  if (el.hidden) { chapter = 'all'; q.value = ''; apply(); }
+  el.scrollIntoView();
+}
+
+q.oninput = apply;
+window.onhashchange = jump;
+apply();
+jump();
+</script>
+</body>
+</html>

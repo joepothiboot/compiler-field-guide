@@ -3,3 +3,4 @@ samples/out/
 codebases/**/build/
 codebases/**/build-asan/
 .pixi/
+site/
