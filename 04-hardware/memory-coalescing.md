@@ -5,12 +5,6 @@
 > transactions. When they load from scattered addresses, each needs its
 > own transaction, and the memory bandwidth drops sharply.
 
-## 🌉 From frontend
-
-Batching API requests: 32 `GET /item/:id` calls for items 1..32 are slow;
-one `GET /items?ids=1..32` is fast. The GPU memory system does that
-batching automatically, but **only** when the addresses are contiguous.
-
 ## 🖼️ Picture
 
 ```

@@ -5,13 +5,6 @@
 > SIMD registers. Every scalar is a width-1 SIMD (`Float32` is
 > `SIMD[DType.float32, 1]`).
 
-## 🌉 From frontend
-
-`DType` is like the element type of a typed array (`Float32Array`,
-`Int8Array`): it says how to interpret the bits. `SIMD[DType.float32, 4]` is
-like a fixed-length `Float32Array(4)` where `a + b` adds all four elements
-in one CPU instruction instead of a loop.
-
 ## 🖼️ Picture
 
 ```

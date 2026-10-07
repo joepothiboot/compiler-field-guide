@@ -6,21 +6,6 @@
 > (`mut`), owns its own value (`var`) or initializes the caller's
 > result (`out`).
 
-## 🌉 From frontend
-
-JS passes objects by shared reference, so any function can mutate your
-object, and you find out later. TypeScript's `readonly` helps a little.
-Mojo makes the intent part of the signature, checked by the compiler:
-
-```
- JS/TS                                 Mojo
- ─────                                 ────
- function show(xs: readonly number[])  def show(x: List[Int])          read (default)
- function push(xs: number[])           def append_one(mut x: List[Int]) mut
- function take(xs) { ...structuredClone }  def consume(var x: List[Int])  var: owns a value
- return value                          def make(out result: List[Int]) out
-```
-
 ## 🖼️ Picture
 
 ```

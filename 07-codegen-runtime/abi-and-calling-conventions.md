@@ -5,13 +5,6 @@
 > arguments and return value, how structs are passed, and which registers a
 > function must preserve.
 
-## 🌉 From frontend
-
-An API contract, but at the machine level. A REST API says "send JSON with
-these fields, get this back". An ABI says "put argument 1 in `x0`, argument
-2 in `x1`, the result comes back in `x0`". Break it and the call silently
-reads garbage, with no error message at all.
-
 ## 🖼️ Picture
 
 ```

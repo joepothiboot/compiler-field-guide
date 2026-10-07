@@ -34,7 +34,7 @@ Apple: the hardware has the same five problems everywhere.
   real output from this machine.
 - `—` means it is standard vocabulary but it does not appear in the samples.
   Those entries come from the tools' documented conventions, not from output
-  in this repo. Verify with the tool before quoting one in an interview.
+  in this repo. Verify with the tool.
 
 ## 🧭 Two kinds of names
 

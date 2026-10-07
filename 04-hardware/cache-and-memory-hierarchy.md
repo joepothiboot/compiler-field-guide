@@ -5,14 +5,6 @@
 > moves between levels in fixed-size chunks called **cache lines**, so
 > _how_ you walk through memory decides how fast your code runs.
 
-## 🌉 From frontend
-
-It is like browser caching layers: memory cache → disk cache → CDN →
-origin server. Each layer is bigger and slower. A request that hits the
-memory cache is almost free. A request that goes to the origin can take
-hundreds of times longer. Hardware caches work the same way, with the
-same "fetch a whole chunk, not one byte" behavior as HTTP.
-
 ## 🖼️ Picture
 
 Real numbers for this Apple M2 (from `sysctl`), with typical latencies:

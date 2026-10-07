@@ -4,14 +4,6 @@
 > in one block share a small, fast, manually managed scratchpad called
 > **shared memory**. Everything else lives in slow **global memory**.
 
-## 🌉 From frontend
-
-Registers are a function's local variables. Global memory is the database.
-Shared memory is a Redis cache that only the workers of one team (block)
-can see, and **you** decide what goes in it and when. It is not an
-automatic cache: you copy data in, call `barrier()` so everyone waits
-until the data is there, then read it.
-
 ## 🖼️ Picture
 
 ```

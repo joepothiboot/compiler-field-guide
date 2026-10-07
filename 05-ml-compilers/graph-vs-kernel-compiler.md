@@ -5,13 +5,6 @@
 > generates fast code for one (possibly fused) operation. Modern stacks use
 > both, one on top of the other.
 
-## 🌉 From frontend
-
-A graph compiler is like a bundler looking at your whole dependency graph:
-deciding code splitting, which modules to merge, what to tree-shake. A kernel
-compiler is like the minifier or V8 optimizing one function. Same pipeline,
-different scope: whole program vs one function.
-
 ## 🖼️ Picture
 
 ```

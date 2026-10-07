@@ -5,14 +5,6 @@
 > decides where memory is allocated, and when an update can happen in place
 > or needs a copy.
 
-## 🌉 From frontend
-
-Immer lets you write `draft.items[0] = x` and produces a new immutable
-state. Under the hood, it shares everything that did not change and only
-copies what did. Bufferization is the reverse direction: you write
-immutable tensor code, and the compiler figures out when it is safe to just
-**overwrite the old buffer** and when it must copy.
-
 ## 🖼️ Picture
 
 ```

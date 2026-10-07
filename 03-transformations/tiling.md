@@ -4,13 +4,6 @@
 > fit in fast memory (cache, shared memory, registers), then processes one
 > tile at a time. It reorders the work; it does not change the result.
 
-## 🌉 From frontend
-
-Virtualized lists (`react-window`) render only the rows that fit on the
-screen, one window at a time, instead of all 100,000 rows. Tiling is the
-same idea for data: work on a window small enough to fit in the fast
-memory, finish with it, then move on.
-
 ## 🖼️ Picture
 
 Matmul `C = A × B`, 256×256, tiled by 32:

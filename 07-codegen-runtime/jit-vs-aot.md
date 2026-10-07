@@ -5,13 +5,6 @@
 > so it can specialize on the actual inputs and hardware, at the cost of
 > compiling during execution.
 
-## 🌉 From frontend
-
-AOT is `vite build`: you produce the bundle once and ship it. A JIT is V8
-compiling your hot functions while the page runs, using types it actually
-observed. ML compilers lean JIT because the facts that matter most (tensor
-shapes, the exact GPU model) are only known at runtime.
-
 ## 🖼️ Picture
 
 ```
@@ -58,7 +51,7 @@ compiler at runtime.
 | Triton          | JIT on first call per (argument types, `constexpr` values); cached on disk in `~/.triton/cache`   |
 | `torch.compile` | JIT on first call, with guards; recompiles when guards fail. `torch.export` / AOTInductor for AOT |
 | CUDA            | `nvcc` AOT to SASS, plus PTX that the driver can JIT for newer GPUs                               |
-| V8              | Tiered JIT (see [V8 tiers vs opt levels](../00-bridge/v8-jit-tiers-vs-opt-levels.md))             |
+| V8              | Tiered JIT             |
 
 ## ⚠️ Common confusion
 
@@ -73,7 +66,6 @@ compiler at runtime.
 
 ## 🔗 Related
 
-- [V8 JIT tiers vs optimization levels](../00-bridge/v8-jit-tiers-vs-opt-levels.md)
 - [torch.compile](../05-ml-compilers/torch-compile.md)
 - [PTX, ptxas and SASS](ptx-ptxas-and-sass.md)
 

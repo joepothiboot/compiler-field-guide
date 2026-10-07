@@ -5,15 +5,6 @@
 > to a compiler backend (**Inductor** by default), which fuses operations
 > and generates new kernels: Triton on GPUs, C++ on CPUs.
 
-## 🌉 From frontend
-
-Dynamo is like a bundler's dependency tracer that watches what your code
-actually does. It works on the running Python bytecode, so it can see
-through normal Python control flow. Inductor is the code generator that
-emits an optimized bundle. **Guards** are the cache keys: if the input
-shapes or types change, it recompiles, like a bundler rebuilding when an
-input file changes.
-
 ## 🖼️ Picture
 
 ```

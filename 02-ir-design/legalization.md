@@ -4,13 +4,6 @@
 > the next stage accepts. A **ConversionTarget** lists what is _legal_ and
 > _illegal_, and conversion patterns rewrite the illegal ops.
 
-## 🌉 From frontend
-
-A browserslist target says "the output must run in Safari 15". Babel then
-rewrites every feature Safari 15 does not support, and leaves the rest
-alone. If a feature has no transform, the build fails. The ConversionTarget
-is the browserslist. The conversion patterns are the Babel transforms.
-
 ## 🖼️ Picture
 
 ```

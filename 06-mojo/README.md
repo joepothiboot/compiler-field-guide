@@ -2,14 +2,14 @@
 
 Mojo 1.1 language and library features that matter for writing fast, generic libraries.
 
-| Page                                                                              | In one line                                                                                                                                                                                                                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Page | In one line |
+| ---- | ----------- |
 | [def, struct and Argument Conventions 🔥](def-struct-and-argument-conventions.md) | Mojo functions are declared with `def`, data types with `struct`, and every argument has a convention that says whether the function borrows it (`read`, the default), mutates the caller's value (`mut`), owns its own value (`var`) or initializes the caller's result (`out`). |
-| [Ownership and Transfer `^` 📦➡️](ownership-and-transfer.md)                      | Every Mojo value has exactly one owner.                                                                                                                                                                                                                                           |
-| [Traits 🧬](traits.md)                                                            | A trait is a named set of methods a type promises to have, like an interface.                                                                                                                                                                                                     |
-| [Parameters vs Arguments 🎚️](parameters-vs-arguments.md)                          | In Mojo, parameters go in square brackets `[...]` and are known at compile time.                                                                                                                                                                                                  |
-| [comptime ⏱️](comptime.md)                                                        | `comptime` asks the compiler to evaluate something while compiling: a constant (`comptime X = ...`), a branch (`comptime if`) or an unrolled loop (`comptime for`).                                                                                                               |
-| [SIMD and DType 🧮](simd-and-dtype.md)                                            | `SIMD[dtype, width]` is Mojo's core numeric type: a fixed-size vector of `width` elements of type `dtype`, mapped directly onto hardware SIMD registers.                                                                                                                          |
-| [MAX and Mojo Kernels 🏎️](max-and-mojo-kernels.md)                                | MAX is Modular's inference platform: a graph compiler and runtime whose kernels are written in Mojo.                                                                                                                                                                              |
+| [Ownership and Transfer `^` 📦➡️](ownership-and-transfer.md) | Every Mojo value has exactly one owner. |
+| [Traits 🧬](traits.md) | A trait is a named set of methods a type promises to have, like an interface. |
+| [Parameters vs Arguments 🎚️](parameters-vs-arguments.md) | In Mojo, parameters go in square brackets `[...]` and are known at compile time. |
+| [comptime ⏱️](comptime.md) | `comptime` asks the compiler to evaluate something while compiling: a constant (`comptime X = ...`), a branch (`comptime if`) or an unrolled loop (`comptime for`). |
+| [SIMD and DType 🧮](simd-and-dtype.md) | `SIMD[dtype, width]` is Mojo's core numeric type: a fixed-size vector of `width` elements of type `dtype`, mapped directly onto hardware SIMD registers. |
+| [MAX and Mojo Kernels 🏎️](max-and-mojo-kernels.md) | MAX is Modular's inference platform: a graph compiler and runtime whose kernels are written in Mojo. |
 
 New pages start from [../_templates/term.md](../_templates/term.md).

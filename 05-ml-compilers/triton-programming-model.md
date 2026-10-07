@@ -5,13 +5,6 @@
 > (`tl.load`, `+`, `tl.dot`, `tl.sum`). The compiler decides how the block
 > is spread across the GPU's threads, and handles coalescing and shared memory.
 
-## 🌉 From frontend
-
-CUDA is like manipulating the DOM node by node. Triton is like React: you
-describe what a whole block of data should become, and the framework works
-out the individual updates (which thread does which element). You give up
-some control and get most of the performance with far less code.
-
 ## 🖼️ Picture
 
 ```

@@ -5,13 +5,6 @@
 > combines object files, resolves every needed symbol to a definition and
 > patches the addresses (**relocations**).
 
-## 🌉 From frontend
-
-Each object file is like an ES module: it `export`s some names and
-`import`s others. The linker is the bundler's resolution step: every
-import must match exactly one export, or the build fails. Relocations are
-the rewritten import paths in the final bundle.
-
 ## 🖼️ Picture
 
 ```

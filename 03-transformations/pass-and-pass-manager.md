@@ -4,14 +4,6 @@
 > _pass manager_ runs an ordered pipeline of passes, nests them at the right
 > level (module, function) and can time, dump or parallelize them.
 
-## 🌉 From frontend
-
-The pass manager is the bundler's plugin runner: it takes a config (the
-pipeline), feeds the module through each plugin in order and reports
-timings (like `vite --profile` or webpack's `--profile`). The
-[bundler plugins vs passes](../00-bridge/bundler-plugins-vs-passes.md) page
-covers the analogy. This page covers the mechanics.
-
 ## 🖼️ Picture
 
 ```
@@ -89,7 +81,6 @@ PassManager intended to run on 'builtin.module', did you intend to nest?`
 
 ## 🔗 Related
 
-- [Bundler plugins vs passes](../00-bridge/bundler-plugins-vs-passes.md)
 - [Pattern rewrite](pattern-rewrite.md)
 - [Canonicalization and folding](canonicalization-and-folding.md)
 

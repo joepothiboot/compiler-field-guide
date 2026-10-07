@@ -5,14 +5,6 @@
 > known at **runtime**. Each distinct set of parameter values produces a
 > separately compiled, specialized version of the function or type.
 
-## 🌉 From frontend
-
-A build-time environment variable (`import.meta.env.MODE`) vs a function
-argument. With the build-time value, the bundler can delete the dead branch
-and inline constants. With a runtime argument, it cannot. Mojo parameters
-give you the build-time kind, for any value you choose: sizes, types,
-flags.
-
 ## 🖼️ Picture
 
 ```

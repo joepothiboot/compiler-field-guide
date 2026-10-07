@@ -5,13 +5,6 @@
 > (`layout`, `linalg`, `nn`, `max.gpu` …) are the "kernel standard library":
 > tensor layouts, GPU launch, matmul and attention building blocks.
 
-## 🌉 From frontend
-
-If Mojo's `std` is like the JS standard library, the MAX packages are like a
-UI framework built on it: higher-level, domain-specific building blocks
-(layouts, tiled tensors, GPU helpers) so kernels don't start from
-raw pointers every time.
-
 ## 🖼️ Picture
 
 ```

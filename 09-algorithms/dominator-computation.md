@@ -6,13 +6,6 @@
 > **dominance frontiers**: the join points where a definition's dominance
 > ends, which is where SSA needs φs.
 
-## 🌉 From frontend
-
-Think of a funnel report in analytics: "every user who reached checkout
-passed through the cart page". The cart page _dominates_ checkout. The
-immediate dominator is the last such mandatory page. The dominance frontier
-is the first page reachable both with and without passing through it.
-
 ## 🖼️ Picture
 
 ```

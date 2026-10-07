@@ -4,7 +4,7 @@ A focused C++ study repository for engineers transitioning into compiler enginee
 
 ## Why this exists
 
-Frontend/backend engineers moving into systems roles usually know modern C++ syntax but haven't internalized the *ownership models*, *dispatch strategies*, and *IR-representation idioms* that dominate real compiler codebases. This repo closes that gap with seven self-contained, compilable files instead of one giant reference — so each concept can be read, run, and modified in isolation.
+Modern C++ syntax is the easy part; the hard part is internalizing the *ownership models*, *dispatch strategies*, and *IR-representation idioms* that dominate real compiler codebases. This repo closes that gap with seven self-contained, compilable files instead of one giant reference — so each concept can be read, run, and modified in isolation.
 
 ## C++ Standard: C++17
 

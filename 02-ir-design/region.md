@@ -4,13 +4,6 @@
 > MLIR represents a function body, a loop body or the branches of an `if`
 > while keeping the structure visible.
 
-## 🌉 From frontend
-
-In JSX, a component can own children: `<Modal>{...}</Modal>`. The children
-are part of the component, and they move with it. A region is the children
-of an op. `scf.for` owns its body, `scf.if` owns its `then` and `else`
-bodies, and `func.func` owns the whole function.
-
 ## 🖼️ Picture
 
 ```

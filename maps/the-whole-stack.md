@@ -76,7 +76,6 @@ vizmlir          :  reads the .mlir text at each step, draws the GPU work, shows
 ## 🔗 Related
 
 - [Dialect](../02-ir-design/dialect.md): the building block of the MLIR level
-- [AST vs IR](../00-bridge/ast-vs-ir.md): why there are so many levels
 - [Vector add in 5 IRs](../rosetta/vector-add-in-5-irs.md): one program at each level
 
 ---

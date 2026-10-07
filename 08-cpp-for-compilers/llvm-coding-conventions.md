@@ -5,12 +5,6 @@
 > library (ADT), and naming rules that differ from most C++ style guides.
 > Knowing it makes both reading and contributing much faster.
 
-## 🌉 From frontend
-
-It is like joining a team with a strict ESLint and Prettier config and its
-own utility library: nothing about the language is new, but the house
-rules decide what "idiomatic" looks like, and reviewers enforce them.
-
 ## 🖼️ Picture
 
 ```

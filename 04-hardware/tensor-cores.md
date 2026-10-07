@@ -5,13 +5,6 @@
 > product like `D = A × B + C` for a 16×8×16 tile, usually with low-precision
 > inputs (f16, bf16, fp8) and f32 accumulation.
 
-## 🌉 From frontend
-
-It is like the browser handing CSS transforms to the GPU compositor instead
-of computing them on the main thread: specialized hardware for one shape of
-work, much faster than doing it in general code. Matrix multiply is the
-one shape that dominates ML, so GPUs got a dedicated unit for it.
-
 ## 🖼️ Picture
 
 ```

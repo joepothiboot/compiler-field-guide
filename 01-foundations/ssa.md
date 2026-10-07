@@ -4,29 +4,6 @@
 > changes, the compiler makes a new, differently named value instead of
 > overwriting the old one.
 
-## 🌉 From frontend
-
-It is like writing everything with `const`, the way immutable updates work
-in Redux:
-
-```js
-// mutable (source code)       // SSA style
-let x = 1;
-const x1 = 1;
-x = x + 2;
-const x2 = x1 + 2;
-x = x * 3;
-const x3 = x2 * 3;
-```
-
-Because nothing is reassigned, "where does this value come from?" always has
-one answer. That makes most optimizations much simpler. For example, it is
-easy to prove that `x1` is still 1 on line 3.
-
-The analogy stops working at **branches**. After an `if` / `else`, which
-`const` holds the answer? SSA needs a special way to say "this value is
-whichever one we arrived with". That is φ (phi), or block arguments in MLIR.
-
 ## 🖼️ Picture
 
 ```
@@ -117,7 +94,6 @@ into SSA values.
 ## 🔗 Related
 
 - [Basic block and CFG](basic-block.md)
-- [AST vs IR](../00-bridge/ast-vs-ir.md)
 - [Dialect](../02-ir-design/dialect.md)
 
 ---

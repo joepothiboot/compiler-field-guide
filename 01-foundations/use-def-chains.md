@@ -3,13 +3,6 @@
 > **One line:** Every SSA value knows its one **definition** and the list of
 > all its **uses**. Passes follow these links instead of searching the code.
 
-## 🌉 From frontend
-
-It is like "Find all references" and "Go to definition" in VS Code, but
-built into the data structure and always up to date. In the compiler,
-"rename this value everywhere" is one call (`replaceAllUsesWith`), because
-each value already holds a list of its users.
-
 ## 🖼️ Picture
 
 ```

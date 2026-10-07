@@ -4,24 +4,6 @@
 > Definition Specification), and **TableGen** generates the C++ class,
 > parser, printer and verifier for it.
 
-## 🌉 From frontend
-
-Like writing a GraphQL schema or an OpenAPI spec and generating TypeScript
-types and client code from it. You describe the _shape_ declaratively, and a
-code generator writes the boilerplate that has to match it exactly.
-
-```
- GraphQL / OpenAPI                  MLIR
- ─────────────────                  ────
- schema.graphql                     DSPOps.td          (declarative spec)
-      │ graphql-codegen                  │ mlir-tblgen
-      ▼                                  ▼
- types.ts, hooks.ts                 DSPOps.h.inc / DSPOps.cpp.inc  (generated C++)
-      │                                  │
- your code imports them             your .cpp includes them and fills in
-                                    only the custom parts (verify, canonicalize)
-```
-
 ## 🖼️ Picture
 
 A real op from nano-dsp-mlir

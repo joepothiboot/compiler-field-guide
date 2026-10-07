@@ -4,14 +4,6 @@
 > function, even the module itself. Every op has the same five parts:
 > **name, operands, results, attributes/properties, regions**.
 
-## 🌉 From frontend
-
-Think of a React element: whatever the component, it is always
-`{ type, props, children }`. That uniform shape is why React DevTools can
-display any component. MLIR ops are uniform in the same way, which is why
-`mlir-opt` can parse, print and verify ops from dialects it has never seen
-(in _generic form_).
-
 ## 🖼️ Picture
 
 ```

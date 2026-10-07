@@ -2,16 +2,16 @@
 
 What passes actually do to the IR.
 
-| Page                                                               | In one line                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Pass and Pass Manager 🏭](pass-and-pass-manager.md)               | A _pass_ is one transformation or analysis over the IR.                                                                                                                                                                                        |
-| [Pattern Rewrite 🧩](pattern-rewrite.md)                           | A _rewrite pattern_ is a small local rule, "if you see this op in this shape, replace it with that". A _driver_ applies a set of patterns across the IR.                                                                                       |
+| Page | In one line |
+| ---- | ----------- |
+| [Pass and Pass Manager 🏭](pass-and-pass-manager.md) | A _pass_ is one transformation or analysis over the IR. |
+| [Pattern Rewrite 🧩](pattern-rewrite.md) | A _rewrite pattern_ is a small local rule, "if you see this op in this shape, replace it with that". A _driver_ applies a set of patterns across the IR. |
 | [Canonicalization and Folding 🧹](canonicalization-and-folding.md) | _Folding_ computes an op's result at compile time when its inputs are constants (or trivially simplifies it, like `x + 0 → x`). _Canonicalization_ rewrites IR into one agreed "standard form", so later passes only need to handle one shape. |
-| [CSE and DCE ♻️](cse-and-dce.md)                                   | _Common subexpression elimination_ (CSE) computes identical expressions once and reuses the result. _Dead code elimination_ (DCE) deletes code whose result nobody uses.                                                                       |
-| [Inlining 📥](inlining.md)                                         | Inlining replaces a function call with a copy of the function's body.                                                                                                                                                                          |
-| [Fusion 🔗](fusion.md)                                             | Fusion merges several operations into one loop or kernel, so intermediate results stay in registers instead of being written to memory and read back.                                                                                          |
-| [Tiling 🧱](tiling.md)                                             | Tiling splits a big loop nest into small blocks (tiles) that fit in fast memory (cache, shared memory, registers), then processes one tile at a time.                                                                                          |
-| [Vectorization ➡️](vectorization.md)                               | Vectorization rewrites a loop that handles one element per step into one that handles several elements per step with SIMD instructions, plus a leftover (_remainder_ or _tail_) loop for the end.                                              |
-| [Bufferization 🪣](bufferization.md)                               | Bufferization converts value-style `tensor`s (immutable, no address) into `memref` buffers (memory that is read and written).                                                                                                                  |
+| [CSE and DCE ♻️](cse-and-dce.md) | _Common subexpression elimination_ (CSE) computes identical expressions once and reuses the result. _Dead code elimination_ (DCE) deletes code whose result nobody uses. |
+| [Inlining 📥](inlining.md) | Inlining replaces a function call with a copy of the function's body. |
+| [Fusion 🔗](fusion.md) | Fusion merges several operations into one loop or kernel, so intermediate results stay in registers instead of being written to memory and read back. |
+| [Tiling 🧱](tiling.md) | Tiling splits a big loop nest into small blocks (tiles) that fit in fast memory (cache, shared memory, registers), then processes one tile at a time. |
+| [Vectorization ➡️](vectorization.md) | Vectorization rewrites a loop that handles one element per step into one that handles several elements per step with SIMD instructions, plus a leftover (_remainder_ or _tail_) loop for the end. |
+| [Bufferization 🪣](bufferization.md) | Bufferization converts value-style `tensor`s (immutable, no address) into `memref` buffers (memory that is read and written). |
 
 New pages start from [../_templates/term.md](../_templates/term.md).

@@ -5,12 +5,6 @@
 > the real machine code of one GPU generation. The NVIDIA driver can also
 > do that step at runtime.
 
-## 🌉 From frontend
-
-PTX is to SASS what JavaScript is to the machine code V8 produces: a
-portable format you ship, compiled by the platform to whatever the actual
-hardware needs. Like JS, PTX runs on GPUs newer than the one you built for.
-
 ## 🖼️ Picture
 
 ```

@@ -5,13 +5,6 @@
 > Template Pattern) dispatches at compile time: no vtable, calls inline.
 > LLVM uses virtual dispatch at plugin boundaries and CRTP on hot paths.
 
-## 🌉 From frontend
-
-Virtual dispatch is like calling `obj.render()` on any component: the right
-method is found at runtime. CRTP is like a build-time code generator that
-writes the exact call for each component type, so nothing is looked up at
-runtime. It is faster, but you can no longer put different types in one array.
-
 ## 🖼️ Picture
 
 ```

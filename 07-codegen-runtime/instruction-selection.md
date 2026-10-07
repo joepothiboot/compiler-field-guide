@@ -5,14 +5,6 @@
 > CPU or GPU, often combining several IR operations into one instruction
 > (`mul` + `add` → `madd`).
 
-## 🌉 From frontend
-
-Like a CSS preprocessor emitting vendor-specific output: the same
-`display: flex` becomes whatever each browser needs. Instruction selection
-picks, for each target, the instructions that implement your IR, and
-looks for combined forms the target offers, the way autoprefixer knows
-which shorthand a browser supports.
-
 ## 🖼️ Picture
 
 ```

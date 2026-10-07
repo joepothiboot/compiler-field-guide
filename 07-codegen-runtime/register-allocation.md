@@ -5,13 +5,6 @@
 > to a physical one, so that two values alive at the same time never share
 > a register. Values that don't fit are **spilled** to the stack.
 
-## 🌉 From frontend
-
-Assigning meeting rooms: each meeting (value) needs a room (register) for
-its time slot (live range). Two meetings that overlap cannot share a room.
-With enough rooms, everyone fits. With too few, some meeting moves to the
-cafeteria (the stack), which is slower to reach.
-
 ## 🖼️ Picture
 
 ```

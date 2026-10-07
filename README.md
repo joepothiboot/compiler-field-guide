@@ -1,8 +1,7 @@
 # compiler-field-guide 🧭
 
 A single place to learn compilers, from the vocabulary of MLIR and LLVM up
-to Triton, PyTorch and Mojo. It is written for someone coming from frontend
-and general software engineering.
+to Triton, PyTorch and Mojo.
 
 The guide is organized **by concept, not by tool**. Each term gets one page,
 and that page shows how LLVM, MLIR, Triton and Mojo each handle it. You should
@@ -17,20 +16,16 @@ say so when something could not be run here (Triton, SASS, the Mac GPU).
 
 1. **[maps/the-whole-stack.md](maps/the-whole-stack.md)**: one diagram from
    Python to machine code, and where each tool sits.
-2. **[00-bridge/](00-bridge/)**: Babel, ASTs, bundler plugins, TypeScript
-   types and V8 tiers, mapped onto compiler ideas.
-3. **[01-foundations/](01-foundations/)**: basic blocks, SSA, dominance, loops.
-4. **[rosetta/vector-add-in-5-irs.md](rosetta/vector-add-in-5-irs.md)**: one
+2. **[01-foundations/](01-foundations/)**: basic blocks, SSA, dominance, loops.
+3. **[rosetta/vector-add-in-5-irs.md](rosetta/vector-add-in-5-irs.md)**: one
    program in five IRs, to connect the vocabulary.
-5. **[vocab/](vocab/)**: the lookup table for `%arg0`, `vector.transfer_read`, `pid`, `offs`.
-6. Then any chapter. **[GLOSSARY.md](GLOSSARY.md)** is the A–Z index, and
-   **[interview/](interview/)** has a week-by-week plan.
+4. **[vocab/](vocab/)**: the lookup table for `%arg0`, `vector.transfer_read`, `pid`, `offs`.
+5. Then any chapter. **[GLOSSARY.md](GLOSSARY.md)** is the A–Z index.
 
 ## 📚 Contents
 
 | Folder                                        | Covers                                                                                                                    | Pages |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----- |
-| [00-bridge](00-bridge/)                       | FE/SWE ideas mapped to compiler ideas                                                                                     | 5     |
 | [01-foundations](01-foundations/)             | Lexer/parser, basic block, CFG, SSA, dominance, use-def, loops                                                            | 6     |
 | [02-ir-design](02-ir-design/)                 | Dialect, op, region, types, attributes, ODS/TableGen, legalization                                                        | 7     |
 | [03-transformations](03-transformations/)     | Passes, patterns, folding, CSE/DCE, inlining, fusion, tiling, vectorization, bufferization                                | 9     |
@@ -44,7 +39,6 @@ say so when something could not be run here (Triton, SASS, the Mac GPU).
 | [maps](maps/)                                 | The whole stack; each tool's pipeline; a matmul's journey to PTX                                                          | 3     |
 | [rosetta](rosetta/)                           | Vector add, reduction and matmul across tools, with measurements                                                          | 3     |
 | [real-world](real-world/)                     | Codebase tours: LLVM/MLIR, Triton, PyTorch Inductor, Mojo/MAX, my projects                                                | 5     |
-| [interview](interview/)                       | Study plan, 5 question banks (100 questions), coding exercises, project stories                                           | 7     |
 | [codebases](codebases/)                       | Runnable C++: compiler-mechanics-cpp and llvm-idioms-workbench (11 test suites)                                           | —     |
 | [samples](samples/)                           | Inputs for every listing and benchmark in the guide                                                                       | —     |
 
@@ -55,7 +49,6 @@ Each page follows [\_templates/term.md](_templates/term.md):
 | Section             | Purpose                                                              |
 | ------------------- | -------------------------------------------------------------------- |
 | **One line**        | The definition, short enough to remember                             |
-| 🌉 From frontend    | An analogy to something you already know, and where it stops working |
 | 🖼️ Picture          | An ASCII diagram. Every page has one.                                |
 | 🔧 In each tool     | Real output, plus how LLVM, MLIR, Triton and Mojo express the idea   |
 | ⚠️ Common confusion | The mistake people usually make with this term                       |

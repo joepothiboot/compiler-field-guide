@@ -4,13 +4,6 @@
 > function entry to B goes through A. In SSA, a value can only be used where
 > its definition dominates the use.
 
-## 🌉 From frontend
-
-Think of a variable declared with `const` inside an `if`: you cannot use it
-after the `if`, because on the `else` path it was never created. JS enforces
-this with block scope. SSA enforces the same thing with dominance, except
-that SSA has no scopes, only blocks and paths.
-
 ## 🖼️ Picture
 
 ```

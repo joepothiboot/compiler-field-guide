@@ -5,19 +5,6 @@
 > `std::unique_ptr` (a tree edge), or by a long-lived **context/arena** that
 > owns everything and hands out raw, **non-owning** pointers.
 
-## 🌉 From frontend
-
-In JS, the GC decides when objects die, and any number of variables can
-reference one object. In LLVM-style C++, you must be able to answer "who
-frees this?" by reading the code. The two answers are like two familiar
-patterns:
-
-```
- React state tree              →  unique_ptr edges: each child has exactly one parent that owns it
- a Redux store / a DB pool     →  arena/context: one long-lived object owns everything;
-                                  everyone else just holds IDs/pointers into it
-```
-
 ## 🖼️ Picture
 
 ```

@@ -4,13 +4,6 @@
 > operation (or a fused group of them) on an accelerator or a CPU. An ML
 > model runs as a sequence of kernel launches.
 
-## 🌉 From frontend
-
-A kernel is like a WebGL/WebGPU shader: a small program that the host
-(your JS) uploads and launches over many data elements at once. The host
-decides _what_ to run and in _what order_. The kernel is the hot inner
-function.
-
 ## 🖼️ Picture
 
 ```

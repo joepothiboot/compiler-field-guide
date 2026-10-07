@@ -5,14 +5,6 @@
 > _Canonicalization_ rewrites IR into one agreed "standard form", so later
 > passes only need to handle one shape.
 
-## 🌉 From frontend
-
-Terser does both: `2 * 3` becomes `6` (folding), and `if (!a) b(); else c();`
-becomes `a ? c() : b()` (a standard form). Prettier is canonicalization for
-formatting: there is only one output, whatever the input style was, which
-makes diffs meaningful. Canonical IR makes pattern matching simpler in the
-same way.
-
 ## 🖼️ Picture
 
 Real `mlir-opt --canonicalize` on [samples/fold_cse.mlir](../samples/fold_cse.mlir):

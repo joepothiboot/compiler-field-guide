@@ -5,14 +5,6 @@
 > traits (`[T: Shape]`) and are compiled separately for each concrete type.
 > There is no runtime dispatch.
 
-## 🌉 From frontend
-
-A TypeScript `interface Shape { area(): number }` plus a generic
-`function describe<T extends Shape>(s: T)`. The difference: TypeScript
-erases `T` and calls `s.area()` dynamically at runtime. Mojo compiles
-`describe[Square]` and `describe[Circle]` as two separate, fully inlinable
-functions (_monomorphization_).
-
 ## 🖼️ Picture
 
 ```

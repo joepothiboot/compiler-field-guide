@@ -4,13 +4,6 @@
 > data** it is: a scalar (`i32`, `f32`), a SIMD vector (`vector<4xf32>`), an
 > immutable array value (`tensor`) or a buffer in memory (`memref`).
 
-## 🌉 From frontend
-
-In JS, `Float32Array` (a buffer you can write to) and a frozen array of
-numbers (a value) are different things, even though they hold the same
-data. MLIR makes the same distinction at the type level: `tensor` is the
-value, and `memref` is the buffer.
-
 ## 🖼️ Picture
 
 ```
@@ -71,7 +64,6 @@ shape. When `memref` is lowered to LLVM, it becomes a small struct
 
 ## 🔗 Related
 
-- [TypeScript types vs IR types](../00-bridge/typescript-types-vs-ir-types.md)
 - [Tensor and shape](../05-ml-compilers/tensor-and-shape.md)
 - [Layout and strides](../05-ml-compilers/layout-and-strides.md)
 - [Bufferization](../03-transformations/bufferization.md)

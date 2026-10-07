@@ -2,7 +2,7 @@
 
 > **Each of my repositories as a real-world sample of the concepts in this
 > guide.** Use this page to connect a concept to code you wrote and can
-> explain in detail, which is the strongest material for an interview.
+> explain in detail.
 
 ## 🗺️ Where each project sits
 
@@ -84,7 +84,6 @@ passes, SSA, dataflow and register allocation.
 
 ## 🔗 Related
 
-- [Talking about your projects](../interview/talking-about-your-projects.md)
 - [Where each tool sits](../maps/where-each-tool-sits.md)
 
 ---

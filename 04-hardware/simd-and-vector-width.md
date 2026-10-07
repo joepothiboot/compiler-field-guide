@@ -5,12 +5,6 @@
 > all lanes at once. The number of lanes is the _vector width_, and it
 > depends on the CPU and on the element size.
 
-## 🌉 From frontend
-
-CSS applies one rule to every matching element at once, not one element at a
-time in a loop. A SIMD instruction applies one operation to every lane of a
-register at once. The catch: every lane gets the **same** operation.
-
 ## 🖼️ Picture
 
 A register has a fixed number of **bits**. Smaller types fit more lanes:

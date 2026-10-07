@@ -5,13 +5,6 @@
 > patterns across the IR. MLIR has two main drivers: **greedy** (for
 > simplification) and **dialect conversion** (for lowering).
 
-## 🌉 From frontend
-
-An ESLint rule with an autofix: it matches one AST node type, checks a
-condition and emits a replacement. `eslint --fix` is the driver that keeps
-applying fixes until no rule matches. MLIR's greedy driver works the same
-way, repeating until the IR stops changing (a _fixpoint_).
-
 ## 🖼️ Picture
 
 ```

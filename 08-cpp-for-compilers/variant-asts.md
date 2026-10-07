@@ -6,13 +6,6 @@
 > nodes are as big as the largest alternative, and nobody else can add new
 > kinds.
 
-## 🌉 From frontend
-
-This is exactly TypeScript's discriminated union with an exhaustive
-`switch`: add a new member to `type Expr = Num | Var | BinOp | Let` and
-every `switch` without a case for it stops compiling (with the `never`
-trick). `std::variant` + `std::visit` give C++ the same guarantee.
-
 ## 🖼️ Picture
 
 ```
@@ -99,7 +92,6 @@ output:
 ## 🔗 Related
 
 - [LLVM-style RTTI](llvm-style-rtti.md)
-- [AST vs IR](../00-bridge/ast-vs-ir.md)
 - [Canonicalization and folding](../03-transformations/canonicalization-and-folding.md)
 
 ---

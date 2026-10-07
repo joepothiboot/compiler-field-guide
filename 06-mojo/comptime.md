@@ -5,14 +5,6 @@
 > unrolled loop (`comptime for`). Ordinary Mojo functions can run at compile
 > time, so there is no separate macro language.
 
-## 🌉 From frontend
-
-Like a bundler's `define` plugin plus dead-code elimination:
-`if (process.env.NODE_ENV === "production")` is decided at build time, and
-the other branch disappears from the bundle. `comptime` makes this a
-language feature, and it can run real functions (below: Fibonacci) during
-the build.
-
 ## 🖼️ Picture
 
 ```

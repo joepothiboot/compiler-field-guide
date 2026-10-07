@@ -4,13 +4,6 @@
 > _parser_ arranges those tokens into a tree (AST) using the language's
 > grammar. Together they make up the **front end**.
 
-## 🌉 From frontend
-
-You have seen both halves: a syntax highlighter is basically a lexer, and
-[astexplorer.net](https://astexplorer.net) shows you a parser's output. When
-Prettier or ESLint says "Unexpected token", that is the parser rejecting a
-token that the grammar does not allow in that position.
-
 ## 🖼️ Picture
 
 ```
@@ -93,8 +86,6 @@ it. Later it becomes a `load`.
 
 ## 🔗 Related
 
-- [AST vs IR](../00-bridge/ast-vs-ir.md)
-- [Babel is a compiler](../00-bridge/babel-is-a-compiler.md)
 
 ---
 

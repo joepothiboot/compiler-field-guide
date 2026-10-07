@@ -5,13 +5,6 @@
 > memory and read back. It is the single most important ML compiler
 > optimization.
 
-## 🌉 From frontend
-
-Chaining `arr.map(f).map(g)` creates a full temporary array after `f`.
-Writing `arr.map(x => g(f(x)))` does the same work in one pass with no
-temporary array. Libraries like Lodash's lazy chains do that merge for you.
-Fusion is the compiler doing it for tensor operations.
-
 ## 🖼️ Picture
 
 `y = relu(a + b)` on 1024 floats:

@@ -4,13 +4,6 @@
 > function's body. It removes call overhead and, more importantly, lets
 > every other optimization see through the call.
 
-## 🌉 From frontend
-
-Bundlers do this as _scope hoisting_ (webpack's `ModuleConcatenationPlugin`,
-Rollup by default): instead of wrapping each module in a function and
-calling it, the code is pasted into one scope. V8's TurboFan inlines hot
-small functions for the same reason.
-
 ## 🖼️ Picture
 
 Real `mlir-opt --inline` on [samples/inline.mlir](../samples/inline.mlir):

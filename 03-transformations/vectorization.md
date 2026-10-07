@@ -4,13 +4,6 @@
 > step into one that handles several elements per step with SIMD
 > instructions, plus a leftover (_remainder_ or _tail_) loop for the end.
 
-## 🌉 From frontend
-
-`Promise.all([a, b, c, d])` does four things in one step instead of four
-`await`s in a row. SIMD does four (or more) additions in one instruction
-instead of four. The difference: SIMD requires the _same_ operation on
-neighboring data.
-
 ## 🖼️ Picture
 
 ```
@@ -105,7 +98,6 @@ size is static. That is one benefit of static shapes.
 
 - [SIMD and vector width](../04-hardware/simd-and-vector-width.md)
 - [SIMD and DType (Mojo)](../06-mojo/simd-and-dtype.md)
-- [V8 JIT tiers vs optimization levels](../00-bridge/v8-jit-tiers-vs-opt-levels.md)
 
 ---
 

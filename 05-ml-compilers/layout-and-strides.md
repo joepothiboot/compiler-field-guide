@@ -5,13 +5,6 @@
 > step along each dimension. Changing strides changes the layout without
 > copying any data.
 
-## 🌉 From frontend
-
-CSS Grid lays out a 2-D grid of items in one DOM order. `grid-auto-flow:
-row` vs `column` changes which neighbor comes next without changing the
-items. Strides do the same for tensors: same numbers, different order in
-memory, or a different _view_ of the same memory.
-
 ## 🖼️ Picture
 
 ```

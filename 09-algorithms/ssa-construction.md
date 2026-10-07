@@ -6,13 +6,6 @@
 > the dominator tree with a stack per variable, then **delete dead φs**. This
 > is the Cytron et al. (1991) algorithm, and it is what LLVM's `mem2reg` does.
 
-## 🌉 From frontend
-
-It is like converting code that reassigns `let` variables into code that
-only uses `const`: every assignment gets a new name (`x_0`, `x_1`), and where
-two paths merge (after an `if`, at a loop head) you add a
-`x_3 = pick(x_1 from left, x_2 from right)`. That `pick` is φ.
-
 ## 🖼️ Picture
 
 ```

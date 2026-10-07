@@ -4,14 +4,6 @@
 > core, compared with the maximum it could hold. More resident warps give
 > the core more work to switch to while other warps wait for memory.
 
-## 🌉 From frontend
-
-The Node.js event loop stays busy because while one request waits for the
-database, it runs another. A GPU core (SM) does the same with warps: when a
-warp stalls on a memory load, the scheduler switches to a ready warp at
-no cost. If only a few warps fit, there is nothing to switch to, and
-the core sits idle.
-
 ## 🖼️ Picture
 
 What limits how many warps fit: each SM has fixed **budgets**, and every

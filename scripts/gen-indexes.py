@@ -11,10 +11,6 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 # (folder, heading, emoji, blurb, pages in reading order)
 CHAPTERS = [
-    ("00-bridge", "Bridge from FE/SWE", "🌉",
-     "Things you already know from frontend and general software work, mapped onto compiler ideas.",
-     ["babel-is-a-compiler", "ast-vs-ir", "bundler-plugins-vs-passes",
-      "typescript-types-vs-ir-types", "v8-jit-tiers-vs-opt-levels"]),
     ("01-foundations", "Foundations", "🧱",
      "The core terms every later chapter assumes.",
      ["lexer-and-parser", "basic-block", "ssa", "dominance", "use-def-chains", "loops-in-ir"]),

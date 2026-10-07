@@ -7,12 +7,6 @@
 > Termination is guaranteed because facts only grow and there are finitely
 > many of them.
 
-## 🌉 From frontend
-
-Like the reactive dependency graph in a signals library (Solid, Vue): when
-one node's value changes, you recompute its dependents, and you stop when
-nothing changes any more. A dataflow worklist does exactly that, over the CFG.
-
 ## 🖼️ Picture
 
 ```

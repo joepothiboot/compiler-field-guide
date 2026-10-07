@@ -2,11 +2,6 @@
 
 > **One line:** The definition, in a single sentence.
 
-## 🌉 From frontend
-
-The closest idea from FE/SWE work. Then one sentence on where the analogy
-stops working.
-
 ## 🖼️ Picture
 
 ```

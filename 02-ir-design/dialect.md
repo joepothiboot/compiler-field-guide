@@ -5,22 +5,6 @@
 > mix several dialects at once, and compiling it means gradually converting
 > the high-level dialects into low-level ones.
 
-## 🌉 From frontend
-
-Think of a web page that mixes HTML, CSS and SVG in one document. Each has
-its own vocabulary and its own namespace, and they sit together in one tree.
-MLIR dialects work the same way, with a prefix on every op:
-
-```
-arith.addf     ← op "addf" from the arith dialect
-scf.for        ← op "for"  from the scf dialect
-llvm.icmp      ← op "icmp" from the llvm dialect
-```
-
-The analogy stops working because, unlike HTML/CSS/SVG, dialects are
-designed to be **converted into each other**, step by step, until only the
-`llvm` dialect is left.
-
 ## 🖼️ Picture
 
 Progressive lowering of one function
@@ -103,7 +87,6 @@ Where the common upstream dialects sit:
 ## 🔗 Related
 
 - [The whole stack](../maps/the-whole-stack.md)
-- [Bundler plugins vs passes](../00-bridge/bundler-plugins-vs-passes.md)
 - [SSA](../01-foundations/ssa.md): why block arguments become `phi`
 
 ---

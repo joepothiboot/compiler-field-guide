@@ -5,13 +5,6 @@
 > at compile time (_static_) or only at runtime (_dynamic_) changes what a
 > compiler can do with it.
 
-## 🌉 From frontend
-
-A tensor is like a typed, multi-dimensional `Float32Array` with a
-`shape` field: `[3, 4]` means 3 rows of 4 numbers. Image data in a
-`<canvas>` (`ImageData`) is a real example: shape `[height, width, 4]`
-(RGBA), stored flat in one buffer.
-
 ## 🖼️ Picture
 
 ```

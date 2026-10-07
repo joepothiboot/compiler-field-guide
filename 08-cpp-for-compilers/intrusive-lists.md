@@ -5,14 +5,6 @@
 > and an element can unlink itself knowing only its own pointer. This is how
 > LLVM stores instructions in blocks and blocks in functions.
 
-## 🌉 From frontend
-
-The DOM is an intrusive tree: every node knows its own `parentNode`,
-`previousSibling` and `nextSibling`, so `el.remove()` or
-`ref.before(el)` work from the element alone. A `std::list<Node*>` is more
-like an array of IDs: to remove an element you first need to find where it
-is stored.
-
 ## 🖼️ Picture
 
 ```

@@ -11,7 +11,7 @@ explains it with real output.
 | AOT (ahead-of-time)  | Compile before running and ship a binary                                                              | [jit-vs-aot](07-codegen-runtime/jit-vs-aot.md)                                     |
 | Arena / context      | One long-lived object owns every node; everyone else holds raw non-owning pointers                    | [ownership-and-arenas](08-cpp-for-compilers/ownership-and-arenas.md)               |
 | `ArrayRef`           | Non-owning (pointer, length) view of a contiguous list                                                | [small-vector-and-arrayref](08-cpp-for-compilers/small-vector-and-arrayref.md)     |
-| AST                  | Tree that mirrors how the source was written                                                          | [ast-vs-ir](00-bridge/ast-vs-ir.md)                                                |
+| AST                  | Tree that mirrors how the source was written                                                          | [lexer-and-parser](01-foundations/lexer-and-parser.md)                                                |
 | Attribute (MLIR)     | A compile-time constant attached to an op                                                             | [attributes-and-properties](02-ir-design/attributes-and-properties.md)             |
 | Autotuning           | Compile several configs, time each on real hardware, keep the fastest                                 | [autotuning](05-ml-compilers/autotuning.md)                                        |
 | Back edge            | CFG edge whose target dominates its source; it defines a loop                                         | [loops-in-ir](01-foundations/loops-in-ir.md)                                       |
@@ -68,7 +68,7 @@ explains it with real output.
 | Instruction selection | Choosing real machine instructions for IR operations                     | [instruction-selection](07-codegen-runtime/instruction-selection.md)                      |
 | Interference graph    | Values as nodes, an edge when two are live at the same time              | [graph-coloring-register-allocation](09-algorithms/graph-coloring-register-allocation.md) |
 | Intrusive list        | A list whose links live inside each element: O(1), allocation-free edits | [intrusive-lists](08-cpp-for-compilers/intrusive-lists.md)                                |
-| IR                    | Intermediate representation: code in a form built for analysis           | [ast-vs-ir](00-bridge/ast-vs-ir.md)                                                       |
+| IR                    | Intermediate representation: code in a form built for analysis           | [lexer-and-parser](01-foundations/lexer-and-parser.md)                                                       |
 | `isa<>`               | LLVM type test built on `classof`                                        | [llvm-style-rtti](08-cpp-for-compilers/llvm-style-rtti.md)                                |
 | IsolatedFromAbove     | An op whose regions can't see outer values (e.g. `func.func`)            | [region](02-ir-design/region.md)                                                          |
 | `iter_args`           | Values carried from one `scf.for` iteration to the next                  | [reduction-in-5-irs](rosetta/reduction-in-5-irs.md)                                       |
@@ -139,7 +139,7 @@ explains it with real output.
 
 | Term                         | One line                                                                      | Page                                                                           |
 | ---------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Target triple                | String naming the output machine, e.g. `nvptx64-nvidia-cuda`                  | [babel-is-a-compiler](00-bridge/babel-is-a-compiler.md)                        |
+| Target triple                | String naming the output machine, e.g. `nvptx64-nvidia-cuda`                  | [instruction-selection](07-codegen-runtime/instruction-selection.md)                        |
 | `tensor` (MLIR)              | Immutable n-D array value                                                     | [tensor-and-shape](05-ml-compilers/tensor-and-shape.md)                        |
 | Tensor cores                 | Matrix-multiply units reached through `mma` instructions                      | [tensor-cores](04-hardware/tensor-cores.md)                                    |
 | Terminator                   | The last op of a block: `br`, `cond_br`, `return`                             | [basic-block](01-foundations/basic-block.md)                                   |

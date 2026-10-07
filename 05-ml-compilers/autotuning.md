@@ -5,13 +5,6 @@
 > real hardware and input shapes, and keeping the fastest. It is used
 > because the best settings are too hard to predict.
 
-## 🌉 From frontend
-
-It is like A/B testing, but for performance: instead of reasoning about
-which bundle split loads fastest, you measure the candidates on real devices
-and keep the winner. Compilers autotune because cost models get the answer
-wrong often enough that measuring is more reliable.
-
 ## 🖼️ Picture
 
 ```

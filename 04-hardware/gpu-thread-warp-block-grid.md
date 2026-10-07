@@ -4,14 +4,6 @@
 > is a group of **threads** that can share fast memory; threads execute in
 > lockstep groups of 32 called **warps**.
 
-## 🌉 From frontend
-
-Picture launching one Web Worker per array element, a million of them, all
-running the same function with a different index. That is a GPU kernel. The
-hardware groups them: workers in the same **block** can share a scratchpad
-and wait for each other. Workers in different blocks cannot talk
-during the kernel.
-
 ## 🖼️ Picture
 
 ```

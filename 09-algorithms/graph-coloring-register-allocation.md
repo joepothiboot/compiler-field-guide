@@ -6,14 +6,6 @@
 > of degree < K), **spill** optimistically when stuck, then **select** colors
 > in reverse order.
 
-## 🌉 From frontend
-
-The map-coloring puzzle: color countries so that neighbors differ, using
-at most K colors. Here the countries are values, "neighbors" means "alive
-at the same time", and colors are registers. The heuristic is: set aside
-the easy countries first (few neighbors), then color them last. By then a
-free color is guaranteed.
-
 ## 🖼️ Picture
 
 ```

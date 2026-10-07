@@ -69,7 +69,6 @@ modular/
 ## 🔗 Related
 
 - [MAX and Mojo kernels](../06-mojo/max-and-mojo-kernels.md)
-- [Mojo interview questions](../interview/question-bank-mojo.md)
 
 ---
 

@@ -5,14 +5,6 @@
 > possible"). `x^` transfers ownership; a copy only happens when you ask for
 > one.
 
-## 🌉 From frontend
-
-In JS, the garbage collector frees objects "at some point" after nothing
-references them. Mojo has no GC: the compiler knows exactly where each
-value's last use is and inserts the destructor call there. It is like
-closing a file handle yourself right after you finish with it, except the
-compiler writes that code for you and never forgets.
-
 ## 🖼️ Picture
 
 ```

@@ -4,16 +4,6 @@
 > top) and one way out (a jump at the bottom). The _control-flow graph_ (CFG)
 > is the graph of blocks connected by those jumps.
 
-## 🌉 From frontend
-
-Think of a synchronous function body with no `if`, no loop, no `return` in
-the middle and no `await`. Once it starts, every line runs, in order. Each
-`if` and loop in real code breaks the function into several of these pieces,
-joined by arrows.
-
-The analogy stops working at _jumps_. JS has no `goto`, but at the IR level
-every `if`, loop, `break` and `continue` becomes a jump between blocks.
-
 ## 🖼️ Picture
 
 A `for` loop ([samples/vadd.c](../samples/vadd.c)) as a CFG:
@@ -104,7 +94,6 @@ And in LLVM IR (from `clang` + `mem2reg`):
 ## 🔗 Related
 
 - [SSA](ssa.md): φ and block arguments in detail
-- [AST vs IR](../00-bridge/ast-vs-ir.md)
 
 ---
 

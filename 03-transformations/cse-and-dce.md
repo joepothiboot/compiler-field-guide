@@ -4,14 +4,6 @@
 > expressions once and reuses the result. _Dead code elimination_ (DCE)
 > deletes code whose result nobody uses.
 
-## 🌉 From frontend
-
-CSE is `useMemo` done by the compiler: if `a * b` was already computed and
-neither input changed, reuse it. DCE is **tree-shaking**: exports that
-nothing imports are removed from the bundle. Tree-shaking works across
-modules. DCE works on values inside a function (and `symbol-dce` works on
-whole unused functions).
-
 ## 🖼️ Picture
 
 Real output on [samples/fold_cse.mlir](../samples/fold_cse.mlir):

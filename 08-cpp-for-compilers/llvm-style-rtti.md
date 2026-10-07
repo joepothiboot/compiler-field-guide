@@ -5,13 +5,6 @@
 > `classof()` predicate, and the templates `isa<>`, `cast<>` and `dyn_cast<>`
 > are built on top. A downcast becomes one load and one or two integer compares.
 
-## 🌉 From frontend
-
-TypeScript's discriminated unions: `type Shape = { kind: "circle", r } |
-{ kind: "square", s }`, then `if (shape.kind === "circle")` narrows the type.
-LLVM does the same thing by hand in C++: a `kind` field in the base class,
-and `dyn_cast<Circle>(shape)` is the narrowing check.
-
 ## 🖼️ Picture
 
 ```

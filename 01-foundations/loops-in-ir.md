@@ -4,13 +4,6 @@
 > block that decides whether to continue, a **body**, a **latch** that jumps
 > back, and one or more **exits**.
 
-## 🌉 From frontend
-
-`for`, `while`, `do/while`, `.forEach` and recursion-turned-loop all look
-different in JS. Once lowered to basic blocks, they all become the same
-shape. The compiler finds loops by looking for **back edges** in the graph,
-not by looking for the `for` keyword.
-
 ## 🖼️ Picture
 
 ```

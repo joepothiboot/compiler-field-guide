@@ -5,21 +5,6 @@
 > op's definition declares and owns. A _discardable attribute_ is extra
 > metadata anyone can attach and any pass may drop.
 
-## 🌉 From frontend
-
-Compare a component's declared props with `data-*` attributes on a DOM node.
-Props (`<Button variant="primary">`) are part of the component's contract.
-`data-testid="x"` is extra metadata: the component does not care about it,
-and nothing breaks if it is removed.
-
-```
- React                        MLIR
- ─────                        ────
- declared props          ≈    properties        <{predicate = 4 : i64}>
- data-* attributes       ≈    discardable attrs {guide.note = "..."}
- runtime values (state)  ≈    operands          (%x, %y)  ← NOT attributes
-```
-
 ## 🖼️ Picture
 
 Real generic output for [samples/attributes.mlir](../samples/attributes.mlir):

@@ -5,14 +5,6 @@
 > a non-owning (pointer, length) view used to pass any contiguous list
 > across an API without copying.
 
-## 🌉 From frontend
-
-Most operand lists in a compiler are tiny (1 to 4 items), like most React
-`children` arrays. Allocating a heap array for each one is like making a
-network request for every 2-item list. `SmallVector` keeps small lists
-inline. `ArrayRef` is like passing a `TypedArray.subarray()` view instead of
-copying the data.
-
 ## 🖼️ Picture
 
 ```

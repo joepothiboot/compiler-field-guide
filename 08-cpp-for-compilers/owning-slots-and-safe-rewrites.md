@@ -6,14 +6,6 @@
 > the parent **first**, then replace the parent. After that, every raw pointer
 > into the old subtree is dangling.
 
-## 🌉 From frontend
-
-In React you never mutate a node you were handed. You return a new tree,
-and the parent swaps it in. An in-place compiler pass is the unsafe version
-of the same thing: to replace a child you need the **parent's slot** that
-holds it, just as you need `parent.replaceChild(newNode, oldNode)` in the
-DOM, not `oldNode` alone.
-
 ## 🖼️ Picture
 
 ```
